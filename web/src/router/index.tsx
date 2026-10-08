@@ -17,6 +17,7 @@ const Archived = lazyWithReload(() => import("@/pages/Archived"));
 const AuthCallback = lazyWithReload(() => import("@/pages/AuthCallback"));
 const MemoMap = lazyWithReload(() => import("@/pages/Map"));
 const Calendar = lazyWithReload(() => import("@/pages/Calendar"));
+const Campus = lazyWithReload(() => import("@/pages/Campus"));
 const Home = lazyWithReload(() => import("@/pages/Home"));
 const Inboxes = lazyWithReload(() => import("@/pages/Inboxes"));
 const MemoDetail = lazyWithReload(() => import("@/pages/MemoDetail"));
@@ -97,6 +98,7 @@ export const routeConfig: RouteObject[] = [
                 children: [{ path: Routes.ABOUT, element: <About /> }],
               },
               { path: Routes.EXPLORE, element: <ExploreRoute /> },
+              { path: "/campus", element: <Campus /> },
               // Like Timeline, the calendar is public: guests see the memos readable to them.
               { path: CALENDAR_ROUTE_PATTERN, element: <Calendar /> },
               { path: Routes.USER_PROFILE, element: <LegacyProfileRedirect /> },
